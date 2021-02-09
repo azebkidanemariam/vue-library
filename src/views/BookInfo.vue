@@ -23,7 +23,7 @@ export default {
     components:{Book},
     computed:{
         book(){
-            return this.$root.$data.books.find(book => book.id == this.$route.params.id)
+            return this.$store.state.books.find(book => book.id == this.$route.params.id)
         }
     },
     
